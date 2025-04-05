@@ -48,7 +48,8 @@ Once the cluster is setup and running you can recreate the UI issue by linking t
 ```
 kubectl get secret gel-ca -n gel -o jsonpath='{.data.tls\.crt}' | base64 -d > gel-ca.crt
 ```
-```Port forward gel from k8s
+2. Port forward gel from k8s
+```
 kubectl port-forward --namespace gel service/gel 5656:5656
 ```
 
